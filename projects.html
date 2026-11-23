@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects portfolio | INSI Group</title>
+<meta name="description" content="Searchable register of all 63 completed INSI Group projects: construction, UXO clearance and engineering design across Lao PDR.">
+<meta property="og:title" content="Projects portfolio | INSI Group">
+<meta property="og:description" content="63 completed projects across hydropower, roads, irrigation, UXO clearance and resettlement.">
+<meta property="og:image" content="assets/logos/insi-group.jpg">
+<meta name="theme-color" content="#0F294A">
+<link rel="icon" type="image/jpeg" href="assets/logos/insi-group.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Noto+Sans+Lao:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="projects">
+<a class="skip body-5" href="#main" data-i18n="skip">Skip to content</a>
+<div id="chrome-top"></div>
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow caption-3" style="color:var(--gold)" data-i18n="pj.eye">Projects portfolio</p>
+      <h1 class="heading-2" data-i18n="pj.h">63 completed projects, one searchable register.</h1>
+      <p class="title-2" data-i18n="pj.p">Every contract below is drawn from the group’s experience record. Filter by subsidiary or sector, or search by name, client and province.</p>
+    </div>
+  </section>
+  <section class="section" style="padding-top:var(--s-500)">
+    <div class="wrap">
+      <div class="toolbar">
+        <div class="search">
+          <i class="ph ph-magnifying-glass" aria-hidden="true"></i>
+          <input class="field" id="q" type="search" placeholder="Search project, client or province" data-i18n-ph="pj.search" aria-label="Search projects">
+        </div>
+        <div class="filters" role="group" aria-label="Filter by subsidiary" id="f-sub"></div>
+        <div class="filters sectors" role="group" aria-label="Filter by sector" id="f-sec"></div>
+      </div>
+      <p class="count body-5" id="count" role="status" aria-live="polite"></p>
+      <table class="tbl" id="tbl">
+        <thead><tr>
+          <th scope="col">No.</th>
+          <th scope="col" data-i18n="th.name">Project name</th>
+          <th scope="col" data-i18n="th.sub">Subsidiary</th>
+          <th scope="col" data-i18n="th.client">Client / funding agency</th>
+          <th scope="col" data-i18n="th.loc">Location</th>
+          <th scope="col" data-i18n="th.scope">Technical scope / contract value</th>
+          <th scope="col" data-i18n="th.status">Status</th>
+        </tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+      <div class="empty" id="empty" hidden>
+        <i class="ph ph-folder-simple-dashed" aria-hidden="true"></i>
+        <h2 class="heading-6" data-i18n="pj.none">No projects match these filters.</h2>
+        <p class="body-3" style="color:var(--muted)" data-i18n="pj.none2">Clear the search or choose another sector.</p>
+        <button class="btn btn-navy button-sm" id="reset" data-i18n="pj.reset">Reset filters</button>
+      </div>
+    </div>
+  </section>
+</main>
+<div id="chrome-bottom"></div>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
